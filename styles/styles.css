@@ -1,1 +1,111 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background: linear-gradient(to right, rgba(168, 241, 222, 1), rgba(249, 191, 189, 0.2), rgba(241, 255, 238, 1));
+}
 
+html,
+body {
+    height: 100%;
+}
+
+.container-fluid>.row {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    margin: 0%;
+}
+
+.nav-div {
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    height: 100%;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #a9acb7;
+    position: relative;
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #4dc591;
+
+}
+
+.nav-link i {
+    margin-right: 8px;
+}
+
+.content-div {
+    padding: 0px;
+    flex-grow: 1;
+}
+
+.main-titles {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 1px;
+    margin-bottom: 0;
+}
+
+#dashboard {
+    max-width: 100%;
+    margin: 0;
+
+}
+
+ul.nav {
+    text-align: center;
+    margin: 7px;
+}
+
+.card {
+    min-height: 170px;
+    /* Allow the card to grow based on content */
+    max-height: 500px;
+    /* Set a minimum width for the cards */
+    width: 390px;
+    padding: 10px;
+    /* Add padding for internal spacing */
+    margin: auto;
+}
+
+.card-body {
+    padding: 0;
+}
+.card-body>img{
+    margin-bottom: 5px;
+}
+.progress {
+    height: .2rem;
+    width: 90%;
+    display: inline-flex;
+}
+
+.progress-bar {
+    background-color: #4dc591;
+}
+.btn-upgrade {
+    background-color: #4dc591;
+    color: white;
+    border-radius: 7px;
+    width: 170px;
+    margin-left: 10px;
+}
+
+.btn-upgrade:hover {
+    background-color: #45b183; /* Darker shade for hover effect */
+    color: white;
+}
