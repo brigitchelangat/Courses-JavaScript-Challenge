@@ -16,7 +16,16 @@ body {
     width: 100%;
     margin: 0%;
 }
-
+.container{
+    max-width: 2000px;
+    padding: 0px;
+}
+.container >.row {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    margin: 0%;
+}
 .nav-div {
     background-color: rgba(255, 255, 255, 1.0);
     padding: 10px;
@@ -97,15 +106,51 @@ ul.nav {
 .progress-bar {
     background-color: #4dc591;
 }
-.btn-upgrade {
+.btn-upgrade,.btn-login{
     background-color: #4dc591;
     color: white;
     border-radius: 7px;
     width: 170px;
     margin-left: 10px;
 }
-
+.btn-login{
+    margin-left: 0px;
+    text-align: center;
+    width: 80%;
+}
 .btn-upgrade:hover {
     background-color: #45b183; /* Darker shade for hover effect */
     color: white;
+}
+
+.enroll-button {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover .enroll-button,
+  .card:focus .enroll-button {
+    display: block;
+    opacity: 1;
+  }
+  
+  .card .enroll-button.visible {
+    display: block;
+    opacity: 1;
+  }
+  
+  .custom-input {
+    border: none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.custom-input:focus {
+    outline: none;
+    background-color: #f0f0f0;
 }
