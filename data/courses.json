@@ -1,5 +1,4 @@
-{
-    "courses": [
+[
         {
             "id": 1,
             "course_code": "SE101",
@@ -151,4 +150,3 @@
             "status": "published"
         }
     ]
-}
