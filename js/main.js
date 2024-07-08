@@ -80,7 +80,7 @@ main();
     enrollButton.classList.toggle('visible');
   });
 
-  
+
 function enroll(courseId) {
     $('#checkoutModal').modal('show');
     $('#proceedCheckout').off('click').on('click', function() {
@@ -89,3 +89,4 @@ function enroll(courseId) {
         // Send enrollment email
     });
 }
+

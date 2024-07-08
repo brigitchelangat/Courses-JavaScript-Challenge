@@ -154,3 +154,6 @@ ul.nav {
     outline: none;
     background-color: #f0f0f0;
 }
+.error{
+    font-size: 12px;
+}
