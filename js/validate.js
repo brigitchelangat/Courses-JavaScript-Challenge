@@ -7,10 +7,21 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 
-signUpForm.addEventListener('submit', e => {
-    e.preventDefault(); //prevent form from submitting
-    validate();
-});
+// Event listeners for form submission
+if (signUpForm) {
+    signUpForm.addEventListener('submit', e => {
+        e.preventDefault(); //prevent form from submitting
+        validate();
+    });
+}
+
+if (loginForm) {
+    loginForm.addEventListener('submit', e => {
+        e.preventDefault(); //prevent form from submitting
+        validate();
+        login(email.value.trim(), password.value.trim());
+    });
+}
 
 // Regular expressions
 const nameRegex = /^[a-zA-Z]{2,}$/; // Only letters, at least 2 characters
@@ -93,7 +104,42 @@ const validate = () => {
 
 };
  
+//isEmailValid
+const isEmailValid = (email) => {
+    const response =  fetch('path/to/users.json');
+    const data =  response.json();
+    const user = data.users.find(user => user.email === email);
+    return user || null;
+};
 
+//login
+const login =  (email, password) => {
+    const user = isEmailValid(email);
+    if (user) {
+        if (user.password === password) {
+            // Redirect to courses.html
+            window.location.href = 'dashboard.html';
+            alert("You have successfully logged in!")
+        } else {
+            // Display error message
+            document.getElementById('loginError').innerHTML = "Your email or password is not valid.";
+        }
+    } else {
+        // Display error message
+        document.getElementById('loginError').innerHTML = "Your email or password is not valid.";
+    }
+};
 
+const loginButton = document.getElementById("loginButton");
+const loginErrorDiv = document.getElementById("loginError");
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    validate();
+    login(emailValue,passwordValue);
+    
+});
 
 
