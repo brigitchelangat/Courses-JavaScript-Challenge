@@ -58,9 +58,6 @@ fetch("data/courses.json")
             "></i>
           <span style="font-weight: 400; font-size: 10px; color: gray">${post.hours} Hours</span>
         </p>
-        <div class="mt-3"> 
-          <button style="font-size: 10px padding:10px" class="btn btn-secondary enroll-button" onclick="enroll(${post.id})">Enroll</button>
-        </div>
         
        </div>
       </div>

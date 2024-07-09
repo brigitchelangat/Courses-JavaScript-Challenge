@@ -7,6 +7,8 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 
+const data = fetch("/user.json");
+console.log(data);
 // Event listeners for form submission
 if (signUpForm) {
     signUpForm.addEventListener('submit', e => {
@@ -105,12 +107,15 @@ const validate = () => {
 
 };
  
+/*
 // Check if email is valid and exists in the users.json file
 const isEmailValid = async (email) => {
     try {
-        const response = await fetch('data/users.json');
+        const response = await fetch('user.json');
+        console.log(response);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            
+           // throw new Error('Network response was not ok');
         }
         const data = await response.json();
         const user = data.users.find(user => user.email === email);
@@ -120,7 +125,7 @@ const isEmailValid = async (email) => {
         return null;
     }
 };
-
+*/
 // Login function to handle user authentication
 const login = async (email, password) => {
     const user = await isEmailValid(email);
