@@ -1,4 +1,5 @@
-[
+{
+    "users": [
         {
             "id": 1,
             "first_name": "John",
@@ -33,4 +34,5 @@
             "status": "active",
             "onboarding_date": "2023-02-02"
         }
-]
+    ]
+}
