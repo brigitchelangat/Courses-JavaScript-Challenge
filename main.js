@@ -15,15 +15,26 @@ fetch("/courses.json")
 
       };
 
+      const DomainImages = {
+        'Software Engineering': 'images/SE.jpg',
+        'User Interface Design': 'images/UI.png',
+        'Web Development': 'images/Web.jpg',
+        'Cloud Computing': 'images/Cloud.jpg',
+        'Data Science': 'images/DataS.jpg',
+        'Artificial Intelligence': 'images/AI.jpg'
+
+      };
+
       // Determine the image source based on the instructor name
       const instructorImageSrc = instructorImages[post.instructor] || 'images/default.png'; 
+      const domainImageSrc = DomainImages[post.domain] || 'images/default.png'; 
 
     myDiv.innerHTML += `
      <div class="col-12 col-lg-3 col-md-6 mb-2">
       <div class="card">
        <div class="card-body">
        <img
-                    src="images/gdesign.png"
+                    src="${domainImageSrc}"
                     alt="Logo"
                     class="img-fluid"
                     width="40"
