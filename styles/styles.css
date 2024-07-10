@@ -85,7 +85,7 @@ ul.nav {
     /* Allow the card to grow based on content */
     max-height: 500px;
     /* Set a minimum width for the cards */
-    width: 335px;
+    width: 300px;
     padding: 10px;
     /* Add padding for internal spacing */
     margin: auto;

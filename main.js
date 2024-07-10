@@ -6,22 +6,30 @@ fetch("/courses.json")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
-     data.forEach(post => {
-        
+     data.courses.forEach(post => {
+       // Map instructor to image
+       const instructorImages = {
+        'Ngeno Victor': 'images/ngeno.png',
+        'Brigit Chelangat': 'images/brigitimage.jpeg',
+        'Roy Kiprop': 'images/roy.jpg'
+
+      };
+
+      // Determine the image source based on the instructor name
+      const instructorImageSrc = instructorImages[post.instructor] || 'images/default.png'; 
+
     myDiv.innerHTML += `
-     <div class="col-12 col-lg-4 col-md-6 mb-4">
+     <div class="col-12 col-lg-3 col-md-6 mb-2">
       <div class="card">
        <div class="card-body">
-       <span style="
-            font-weight: bolder;
-            font-size: 15px;
-            display:inline;
-          ">
-          ${post.course_code}
-       
-        </span>
-        
-          <i class="bi bi-three-dots" style="margin-left: 240px; font-size: 10px; color: gray "></i>
+       <img
+                    src="images/gdesign.png"
+                    alt="Logo"
+                    class="img-fluid"
+                    width="40"
+                    height="40"
+                    style="border-radius: 50px"
+                  />
         <p style="
             font-weight: 500;
             font-size: 15px;
@@ -31,7 +39,7 @@ fetch("/courses.json")
        
         </p>
         
-        <img src="images/brigitimage.jpeg" alt="Logo" class="img-fluid" width="25" height="25" style="border-radius: 50px" />
+        <img src="${instructorImageSrc}" alt="Logo" class="img-fluid" width="25" height="25" style="border-radius: 50px" />
         <span style="font-weight: 400; font-size: 11px; color: gray">${post.instructor}</span>
         <p style="margin-bottom: 5px">
           <i class="bi bi-book" style="
