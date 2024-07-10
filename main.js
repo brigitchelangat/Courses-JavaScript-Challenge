@@ -29,6 +29,46 @@ fetch("/courses.json")
       const instructorImageSrc = instructorImages[post.instructor] || 'images/default.png'; 
       const domainImageSrc = DomainImages[post.domain] || 'images/default.png'; 
 
+      // Determine the HTML for completion rate
+      let completionRateHtml;
+      if (post.completion_rate === "100%") {
+        completionRateHtml = `
+          <i
+            class="bi bi-check-circle-fill"
+            style="
+              font-size: 10px;
+              color: #4dc591;
+              line-height: 1;
+              font-weight: 500 !important;
+              text-align: center;
+              margin-left: 1px;
+            "
+          ></i>
+          <span
+            style="
+              font-weight: 400;
+              font-size: 10px;
+              color: gray;
+              line-height: 1;
+            "
+            >Completed</span
+          >`;
+      } else {
+        completionRateHtml = `
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: ${post.completion_rate}"
+              aria-valuenow="${parseInt(post.completion_rate)}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+          <span style="font-weight: 500; font-size: 10px">${post.completion_rate}</span>
+        `;
+      }
+
     myDiv.innerHTML += `
      <div class="col-12 col-lg-3 col-md-6 mb-2">
       <div class="card">
@@ -52,7 +92,7 @@ fetch("/courses.json")
         
         <img src="${instructorImageSrc}" alt="Logo" class="img-fluid" width="25" height="25" style="border-radius: 50px" />
         <span style="font-weight: 400; font-size: 11px; color: gray">${post.instructor}</span>
-        <p style="margin-bottom: 5px">
+        <p style="margin-bottom: 0px">
           <i class="bi bi-book" style="
               font-size: 10px;
               color: blue;
@@ -77,7 +117,7 @@ fetch("/courses.json")
             "></i>
           <span style="font-weight: 400; font-size: 10px; color: gray">${post.hours} Hours</span>
         </p>
-        
+        ${completionRateHtml}
        </div>
       </div>
      </div>

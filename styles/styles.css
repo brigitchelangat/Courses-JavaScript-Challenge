@@ -17,8 +17,12 @@ body {
     margin: 0%;
 }
 .container{
-    max-width: 2000px;
+    display: flex;
+    width: 70%;
+    height:80%;
+    margin: auto;
     padding: 0px;
+    border-radius: 20px;
 }
 .container >.row {
     height: 100%;
@@ -99,7 +103,7 @@ ul.nav {
 }
 .progress {
     height: .2rem;
-    width: 90%;
+    width: 80%;
     display: inline-flex;
 }
 
@@ -140,20 +144,52 @@ ul.nav {
     opacity: 1;
   }
   
+  input:-internal-autofill-selected {
+    background-color: #fff !important;
+  }
+
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  background-color: #fff !important;
+  color: #000 !important; /* Ensuring the text color is consistent */
+}
+
   .custom-input {
     border: none;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
-    padding: 10px;
+    padding: 5px;
+    padding-left: 0px;
     border-radius: 5px;
     width: 70%;
     box-sizing: border-box;
+    height: 20px;
 }
 
 .custom-input:focus {
-    outline: none;
-    background-color: #f0f0f0;
+    outline: 0;
+    background-color: #fff;
 }
 .error{
     font-size: 12px;
+}
+.form-control{
+    font-size: 11px !important;
+}
+fieldset {
+    border: 1px solid #f4f4f4;
+    border-radius: 10px; 
+    width: 80%; 
+    padding-left: 15px;
+    padding-bottom: 10px; 
+    padding-top: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+label{
+    font-size: 11px;
+    margin-bottom: 0px; 
+    color: #b4b3b8; 
 }

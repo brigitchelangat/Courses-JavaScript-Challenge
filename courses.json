@@ -13,6 +13,7 @@
             "created_by": "Admin",
             "modified": "2023-02-15",
             "modified_by": "Admin",
+            "completion_rate": "100%",
             "status": "published"
         },
         {
@@ -28,6 +29,7 @@
             "created_by": "Admin",
             "modified": "2023-02-20",
             "modified_by": "Admin",
+            "completion_rate": "70%",
             "status": "published"
         },
         {
@@ -43,6 +45,7 @@
             "created_by": "Admin",
             "modified": "2023-02-22",
             "modified_by": "Admin",
+            "completion_rate": "100%",
             "status": "published"
         },
         {
@@ -58,6 +61,7 @@
             "created_by": "Admin",
             "modified": "2023-02-25",
             "modified_by": "Admin",
+            "completion_rate": "60%",
             "status": "published"
         },
         {
@@ -73,6 +77,7 @@
             "created_by": "Admin",
             "modified": "2023-03-01",
             "modified_by": "Admin",
+            "completion_rate": "34%",
             "status": "published"
         },
         {
@@ -88,6 +93,7 @@
             "created_by": "Admin",
             "modified": "2023-03-05",
             "modified_by": "Admin",
+            "completion_rate": "40%",
             "status": "published"
         },
         {
@@ -103,6 +109,7 @@
             "created_by": "Admin",
             "modified": "2023-03-10",
             "modified_by": "Admin",
+            "completion_rate": "50%",
             "status": "published"
         },
         {
@@ -118,6 +125,7 @@
             "created_by": "Admin",
             "modified": "2023-03-15",
             "modified_by": "Admin",
+            "completion_rate": "100%",
             "status": "published"
         },
         {
@@ -133,6 +141,7 @@
             "created_by": "Admin",
             "modified": "2023-03-20",
             "modified_by": "Admin",
+            "completion_rate": "30%",
             "status": "published"
         },
         {
@@ -148,6 +157,7 @@
             "created_by": "Admin",
             "modified": "2023-03-25",
             "modified_by": "Admin",
+            "completion_rate": "10%",
             "status": "published"
         }
       ]
