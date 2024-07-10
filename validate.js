@@ -106,29 +106,28 @@ const validate = () => {
     }
 
 };
- 
-/*
-// Check if email is valid and exists in the users.json file
-const isEmailValid = async (email) => {
-    try {
-        const response = await fetch('user.json');
-        console.log(response);
-        if (!response.ok) {
-            
-           // throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        const user = data.users.find(user => user.email === email);
-        return user || null;
-    } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
-        return null;
-    }
-};
-*/
+
+let userData = null;
+
+fetch("/user.json")
+  .then((response) => response.json())
+  .then((data) => {
+    userData = data;  // Store the data in a variable
+    console.log(userData);
+  });
+
+  //isEmailValid function
+const isEmailValid = (email) => {
+  if (!userData) {
+    console.log("User data not loaded yet.");
+    return null;
+  }
+  return userData.users.find(user => user.email === email) || null;
+}
+
 // Login function to handle user authentication
-const login = async (email, password) => {
-    const user = await isEmailValid(email);
+const login =  (email, password) => {
+    const user = isEmailValid(email);
     if (user) {
         if (user.password === password) {
             // Redirect to dashboard.html

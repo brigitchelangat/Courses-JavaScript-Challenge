@@ -2,7 +2,7 @@
 function main(){
     const myDiv = document.querySelector("#courseList");
 
-fetch("data/courses.json")
+fetch("/courses.json")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -70,13 +70,6 @@ fetch("data/courses.json")
   .catch((error) => console.error("Error loading JSON file", error));
 }
 main();
-
- // Add click event listener to toggle button visibility
- document.querySelector('.card').addEventListener('click', function() {
-    const enrollButton = this.querySelector('.enroll-button');
-    enrollButton.classList.toggle('visible');
-  });
-
 
 function enroll(courseId) {
     $('#checkoutModal').modal('show');
